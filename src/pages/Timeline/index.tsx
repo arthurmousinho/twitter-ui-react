@@ -16,8 +16,12 @@ export function Timeline() {
 
     function createNewTweet(event: FormEvent) {
       event.preventDefault()
-      setTweets([newTweet, ...tweets])
-      setNewTweet('')
+      if (newTweet.trim() === "") {
+        alert('Não é possível adicionar um Tweet vazio')
+      } else {
+        setTweets([newTweet, ...tweets])
+        setNewTweet('')
+      }
     }
 
     function handleHotKeySubmit(event: KeyboardEvent) {
