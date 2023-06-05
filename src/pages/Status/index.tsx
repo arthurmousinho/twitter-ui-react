@@ -17,14 +17,17 @@ export function Status() {
 
     function createNewAnswer(event: FormEvent) {
       event.preventDefault()
-      setAnswers([newAnswer, ...answers])
-      setNewAnswer('')
-    }  
+      if (newAnswer.trim() === "") {
+        alert('Não é possível adicionar uma resposta vazia')
+      } else {
+        setAnswers([newAnswer, ...answers])
+        setNewAnswer('')
+      }
+    }
 
     function handleHotKeySubmit(event: KeyboardEvent) {
       if (event.key == "Enter" && (event.ctrlKey || event.metaKey)) {
-        setAnswers([newAnswer, ...answers])
-        setNewAnswer('')
+        createNewAnswer(event)
       }
     }
 
