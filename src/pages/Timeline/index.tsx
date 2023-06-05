@@ -10,8 +10,8 @@ export function Timeline() {
 
     const [newTweet, setNewTweet] = useState('')
     const [tweets, setTweets] = useState([
-      'Aprendi muito sobre react juntamente com typescript',
-      'Projeto desenvolvido, durante a Masterclass React da rocketseat',
+      'Aprendi muito sobre react com typescript',
+      'Projeto desenvolvido, durante a Masterclass React da Rocketseat',
     ])
 
     function createNewTweet(event: FormEvent) {
