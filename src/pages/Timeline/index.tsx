@@ -26,8 +26,7 @@ export function Timeline() {
 
     function handleHotKeySubmit(event: KeyboardEvent) {
       if (event.key == "Enter" && (event.ctrlKey || event.metaKey)) {
-        setTweets([newTweet, ...tweets])
-        setNewTweet('')
+        createNewTweet(event)
       }
     }
 
